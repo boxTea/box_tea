@@ -36,6 +36,7 @@ export default function SignIn() {
 					.select('user_type')
 					.eq('users_email', user.email)
 					.single();
+				console.log(data)
 				if (data.user_type === 'worker') {
 					router.push("/worker-dashboard");
 				} else {
